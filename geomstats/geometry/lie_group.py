@@ -76,8 +76,6 @@ class LieGroup(Manifold):
             left_or_right="right",
         )
 
-        self.metrics = []
-
     def get_identity(self, point_type=None):
         """Get the identity of the group.
 
@@ -398,10 +396,6 @@ class LieGroup(Manifold):
         raise NotImplementedError(
             "The group exponential barycenter is not implemented."
         )
-
-    def add_metric(self, metric):
-        """Add a metric to the instance's list of metrics."""
-        self.metrics.append(metric)
 
     def lie_bracket(self, tangent_vector_a, tangent_vector_b, base_point=None):
         """Compute the lie bracket of two tangent vectors.
